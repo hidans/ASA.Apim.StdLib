@@ -3,3 +3,11 @@ D:\Work\ASA\ASA.Apim\ASA.Apim.Library\bin\Debug\ASA.Apim.Library.pdb
 D:\Work\ASA\ASA.Apim\ASA.Apim.Library\obj\Debug\ASA.Apim.Library.csprojResolveAssemblyReference.cache
 D:\Work\ASA\ASA.Apim\ASA.Apim.Library\obj\Debug\ASA.Apim.Library.dll
 D:\Work\ASA\ASA.Apim\ASA.Apim.Library\obj\Debug\ASA.Apim.Library.pdb
+D:\Work\ASA\ASA.apim.lib\ASA.Apim.Library\bin\Debug\ASA.Apim.Library.dll.config
+D:\Work\ASA\ASA.apim.lib\ASA.Apim.Library\bin\Debug\ASA.Apim.Library.dll
+D:\Work\ASA\ASA.apim.lib\ASA.Apim.Library\bin\Debug\ASA.Apim.Library.pdb
+D:\Work\ASA\ASA.apim.lib\ASA.Apim.Library\bin\Debug\log4net.dll
+D:\Work\ASA\ASA.apim.lib\ASA.Apim.Library\bin\Debug\log4net.xml
+D:\Work\ASA\ASA.apim.lib\ASA.Apim.Library\obj\Debug\ASA.Apim.Library.csprojResolveAssemblyReference.cache
+D:\Work\ASA\ASA.apim.lib\ASA.Apim.Library\obj\Debug\ASA.Apim.Library.dll
+D:\Work\ASA\ASA.apim.lib\ASA.Apim.Library\obj\Debug\ASA.Apim.Library.pdb

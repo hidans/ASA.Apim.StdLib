@@ -28,10 +28,17 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x64</PlatformTarget>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -40,12 +47,184 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ApiService.cs" />
+    <Compile Include="CourseService.cs" />
     <Compile Include="Helpers\RequestHelper.cs" />
+    <Compile Include="Partials\Countries_Service.cs" />
+    <Compile Include="Partials\CourseHeader_Service.cs" />
+    <Compile Include="Partials\CourseList_Service.cs" />
+    <Compile Include="Partials\CoursePrices_Service.cs" />
+    <Compile Include="Partials\HonoraryOffices_Service.cs" />
+    <Compile Include="Partials\PostCodes_Service.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
     <Compile Include="Security\ApiManagerCredentials.cs" />
+    <Compile Include="Services\CredentialService.cs" />
+    <Compile Include="Services\LogService.cs" />
+    <Compile Include="Web References\Countries_Service\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\CourseHeader_Service\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\CourseList_Service\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\CoursePrices_Service\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\HonoraryOffices_Service\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\PostCodes_Service\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Partials\" />
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\Countries_Service\Countries.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Countries_Service\Countries_Service.wsdl" />
+    <None Include="Web References\Countries_Service\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\CourseHeader_Service\CourseHeader.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\CourseHeader_Service\CourseHeader_Service.wsdl" />
+    <None Include="Web References\CourseHeader_Service\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\CourseList_Service\CourseList.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\CourseList_Service\CourseList_Service.wsdl" />
+    <None Include="Web References\CourseList_Service\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\CoursePrices_Service\CoursePrices.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\CoursePrices_Service\CoursePrices_Service.wsdl" />
+    <None Include="Web References\CoursePrices_Service\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\HonoraryOffices_Service\HonoraryOffices.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\HonoraryOffices_Service\HonoraryOffices_Service.wsdl" />
+    <None Include="Web References\HonoraryOffices_Service\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\PostCodes_Service\PostCodes.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\PostCodes_Service\PostCodes_Service.wsdl" />
+    <None Include="Web References\PostCodes_Service\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="D:\Work\ASA\WSDL\Countries_Service">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\Countries_Service\</RelPath>
+      <UpdateFromURL>D:\Work\ASA\WSDL\Countries_Service</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>ASA_Apim_Library_Countries_Service_Countries_Service</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="D:\Work\ASA\WSDL\CourseHeader_Service">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\CourseHeader_Service\</RelPath>
+      <UpdateFromURL>D:\Work\ASA\WSDL\CourseHeader_Service</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>ASA_Apim_Library_CourseHeader_Service_CourseHeader_Service</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="D:\Work\ASA\WSDL\CourseList_Service">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\CourseList_Service\</RelPath>
+      <UpdateFromURL>D:\Work\ASA\WSDL\CourseList_Service</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>ASA_Apim_Library_CourseList_Service_CourseList_Service</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="D:\Work\ASA\WSDL\CoursePrices_Service">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\CoursePrices_Service\</RelPath>
+      <UpdateFromURL>D:\Work\ASA\WSDL\CoursePrices_Service</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>ASA_Apim_Library_CoursePrices_Service_CoursePrices_Service</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="D:\Work\ASA\WSDL\HonoraryOffices_Service">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\HonoraryOffices_Service\</RelPath>
+      <UpdateFromURL>D:\Work\ASA\WSDL\HonoraryOffices_Service</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>ASA_Apim_Library_HonoraryOffices_Service_HonoraryOffices_Service</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="D:\Work\ASA\WSDL\PostCodes_Service">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\PostCodes_Service\</RelPath>
+      <UpdateFromURL>D:\Work\ASA\WSDL\PostCodes_Service</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>ASA_Apim_Library_PostCodes_Service_PostCodes_Service</CachedSettingsPropName>
+    </WebReferenceUrl>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

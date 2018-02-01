@@ -1,4 +1,5 @@
-﻿using System.Reflection;
+﻿using System.Resources;
+using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
@@ -6,11 +7,11 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("ASA.Apim.Library")]
-[assembly: AssemblyDescription("Et library til at hente kurser og medlemmer til aftenskolerne.")]
+[assembly: AssemblyDescription("Et library til at hente kurser og medlemmer fra navision til aftenskolerne.")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("ASA")]
+[assembly: AssemblyCompany("Synergi A/S & Hidan")]
 [assembly: AssemblyProduct("ASA.Apim.Library")]
-[assembly: AssemblyCopyright("Copyright ©  2018")]
+[assembly: AssemblyCopyright("Copyright © 2018")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("da-DK")]
 
@@ -34,3 +35,6 @@ using System.Runtime.InteropServices;
 // [assembly: AssemblyVersion("1.0.*")]
 [assembly: AssemblyVersion("1.0.0.0")]
 [assembly: AssemblyFileVersion("1.0.0.0")]
+
+[assembly: log4net.Config.XmlConfigurator(Watch = true)]
+[assembly: NeutralResourcesLanguage("da-DK")]

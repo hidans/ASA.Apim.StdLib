@@ -5,31 +5,26 @@ namespace ASA.Apim.Library.Helpers
 {
     internal static class RequestHelper
     {
-        internal static WebRequest AddAzureHeaders(this WebRequest request, ApiManagerCredentials credentials)
+        internal static WebRequest AddHeaders(this WebRequest request, ApiManagerCredentials credentials)
         {
             if(credentials != null)
             {
                 if (!string.IsNullOrEmpty(credentials.AccountKey))
                 {
-                    request.OcpApimAccountKey(credentials.AccountKey);
+                    AddHeader(request, "Ocp-Apim-account-Key", credentials.AccountKey);
                 }
 
                 if (!string.IsNullOrEmpty(credentials.SubscriptionKey))
                 {
-                    request.OcpApimSubscriptionKey(credentials.SubscriptionKey);
+                    AddHeader(request, "Ocp-Apim-Subscription-Ke", credentials.SubscriptionKey);
                 }
             }         
             return request;
         }
 
-        private static void OcpApimAccountKey(this WebRequest request, string key)
+        private static void AddHeader(WebRequest request, string name, string value)
         {
-            request.Headers.Add("Ocp-Apim-account-Key", key);
-        }
-
-        private static void OcpApimSubscriptionKey(this WebRequest request, string key)
-        {
-            request.Headers.Add("Ocp-Apim-Subscription-Key", key);
+            request.Headers.Add(name, value);
         }
     }
 }
