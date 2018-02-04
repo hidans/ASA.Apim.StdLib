@@ -1,0 +1,10 @@
+D:\Work\ASA\ASA.apim.lib\ASA.Apim.Library\bin\Release\ASA.Apim.Library.dll.config
+D:\Work\ASA\ASA.apim.lib\ASA.Apim.Library\bin\Release\ASA.Apim.Library.dll
+D:\Work\ASA\ASA.apim.lib\ASA.Apim.Library\bin\Release\ASA.Apim.Library.XmlSerializers.dll
+D:\Work\ASA\ASA.apim.lib\ASA.Apim.Library\bin\Release\ASA.Apim.Library.pdb
+D:\Work\ASA\ASA.apim.lib\ASA.Apim.Library\bin\Release\log4net.dll
+D:\Work\ASA\ASA.apim.lib\ASA.Apim.Library\bin\Release\log4net.xml
+D:\Work\ASA\ASA.apim.lib\ASA.Apim.Library\obj\Release\ASA.Apim.Library.dll
+D:\Work\ASA\ASA.apim.lib\ASA.Apim.Library\obj\Release\ASA.Apim.Library.pdb
+D:\Work\ASA\ASA.apim.lib\ASA.Apim.Library\obj\Release\ASA.Apim.Library.XmlSerializers.dll
+D:\Work\ASA\ASA.apim.lib\ASA.Apim.Library\obj\Release\ASA.Apim.Library.csprojResolveAssemblyReference.cache
