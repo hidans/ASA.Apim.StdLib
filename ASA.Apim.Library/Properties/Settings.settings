@@ -20,5 +20,8 @@
     <Setting Name="ASA_Apim_Library_PostCodes_Service_PostCodes_Service" Type="(Web Service URL)" Scope="Application">
       <Value Profile="(Default)">https://consulthidanapi.azure-api.net/nav/postcodes</Value>
     </Setting>
+    <Setting Name="ASA_Apim_Library_CourseEnrollments_Service_CourseEnrollments" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://consulthidanapi.azure-api.net/nav/courseenrollments</Value>
+    </Setting>
   </Settings>
 </SettingsFile>
