@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:tns="urn:microsoft-dynamics-schemas/codeunit/CourseEnrollments" targetNamespace="urn:microsoft-dynamics-schemas/codeunit/CourseEnrollments" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <schema xmlns:tns="urn:microsoft-dynamics-nav/xmlports/x6148513" xmlns:apim-wsdltns="urn:microsoft-dynamics-schemas/codeunit/CourseEnrollments" elementFormDefault="qualified" targetNamespace="urn:microsoft-dynamics-nav/xmlports/x6148513" xmlns="http://www.w3.org/2001/XMLSchema">
+      <complexType name="CourseEnrollment">
+        <sequence>
+          <element minOccurs="0" maxOccurs="1" name="ParticipantNo" type="string" />
+          <element minOccurs="0" maxOccurs="1" default="0" name="ParticipantEntryNo" type="int" />
+          <element minOccurs="0" maxOccurs="1" name="CustomerNo" type="string" />
+          <element minOccurs="0" maxOccurs="1" name="CourseNo" type="string" />
+          <element minOccurs="0" maxOccurs="1" default="0" name="Price" type="decimal" />
+          <element minOccurs="0" maxOccurs="1" name="WayOfPayment" type="string" />
+          <element minOccurs="0" maxOccurs="1" name="PaymentReference" type="string" />
+          <element minOccurs="1" maxOccurs="1" default="0" name="PaidAmount" type="decimal" />
+          <element minOccurs="0" maxOccurs="1" name="Name" type="string" />
+          <element minOccurs="0" maxOccurs="1" name="Name2" type="string" />
+          <element minOccurs="0" maxOccurs="1" name="Address" type="string" />
+          <element minOccurs="0" maxOccurs="1" name="StreetName" type="string" />
+          <element minOccurs="0" maxOccurs="1" default="0" name="StreetNo" type="int" />
+          <element minOccurs="0" maxOccurs="1" name="StreetNoExtension" type="string" />
+          <element minOccurs="0" maxOccurs="1" name="FloorNo" type="string" />
+          <element minOccurs="0" maxOccurs="1" name="FloorNoExtension" type="string" />
+          <element minOccurs="0" maxOccurs="1" default="0" name="PostBox" type="int" />
+          <element minOccurs="0" maxOccurs="1" name="Address2" type="string" />
+          <element minOccurs="0" maxOccurs="1" name="PostCode" type="string" />
+          <element minOccurs="1" maxOccurs="1" name="City" type="string" />
+          <element minOccurs="0" maxOccurs="1" name="CountryCode" type="string" />
+          <element minOccurs="0" maxOccurs="1" name="PhoneNo" type="string" />
+          <element minOccurs="0" maxOccurs="1" name="WorkPhoneNo" type="string" />
+          <element minOccurs="0" maxOccurs="1" name="MobilePhoneNo" type="string" />
+          <element minOccurs="0" maxOccurs="1" name="Email" type="string" />
+          <element minOccurs="0" maxOccurs="1" name="SocialSecurityNo" type="string" />
+          <element minOccurs="0" maxOccurs="1" name="ParticipantType" type="string" />
+          <element minOccurs="1" maxOccurs="1" name="ParticipantBillTo" type="string" />
+          <element minOccurs="0" maxOccurs="1" name="EANno" type="string" />
+          <element minOccurs="1" maxOccurs="1" name="PortalOrderId" type="string" />
+        </sequence>
+      </complexType>
+      <complexType name="CourseEnrollments" mixed="true">
+        <sequence>
+          <element minOccurs="1" maxOccurs="unbounded" name="CourseEnrollment" type="tns:CourseEnrollment" />
+        </sequence>
+      </complexType>
+      <element name="CourseEnrollments" type="tns:CourseEnrollments" />
+    </schema>
+    <schema xmlns:q2="urn:microsoft-dynamics-nav/xmlports/x6148513" xmlns:apim-wsdltns="urn:microsoft-dynamics-schemas/codeunit/CourseEnrollments" xmlns:q1="urn:microsoft-dynamics-nav/xmlports/x6148513" elementFormDefault="qualified" targetNamespace="urn:microsoft-dynamics-schemas/codeunit/CourseEnrollments" xmlns="http://www.w3.org/2001/XMLSchema">
+      <element name="CourseEnrollments">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="courseEnrollXML" type="q1:CourseEnrollments" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="CourseEnrollments_Result">
+        <complexType>
+          <sequence>
+            <element xmlns:q2="urn:microsoft-dynamics-nav/xmlports/x6148513" minOccurs="1" maxOccurs="1" name="courseEnrollXML" type="q1:CourseEnrollments" />
+          </sequence>
+        </complexType>
+      </element>
+    </schema>
+  </wsdl:types>
+  <wsdl:message name="CourseEnrollments_InputMessage">
+    <wsdl:part name="parameters" element="tns:CourseEnrollments" />
+  </wsdl:message>
+  <wsdl:message name="CourseEnrollments_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CourseEnrollments_Result" />
+  </wsdl:message>
+  <wsdl:portType name="CourseEnrollments">
+    <wsdl:operation name="CourseEnrollments">
+      <wsdl:input message="tns:CourseEnrollments_InputMessage" />
+      <wsdl:output message="tns:CourseEnrollments_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="CourseEnrollments" type="tns:CourseEnrollments">
+    <binding transport="http://schemas.xmlsoap.org/soap/http" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    <wsdl:operation name="CourseEnrollments">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/CourseEnrollments:CourseEnrollments" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <wsdl:input>
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </wsdl:input>
+      <wsdl:output>
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CourseEnrollments">
+    <wsdl:port name="CourseEnrollments" binding="tns:CourseEnrollments">
+      <address location="https://consulthidanapi.azure-api.net/nav/courseenrollments" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

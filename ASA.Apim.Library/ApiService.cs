@@ -99,6 +99,14 @@ namespace ASA.Apim.Library
                         var criteria = string.Join("|", courseTypes);
                         if (!string.IsNullOrEmpty(criteria))
                         {
+                            if(criteria.StartsWith("|"))
+                            {
+                                criteria = criteria.Substring(1);
+                            }
+                            if(criteria.EndsWith("|"))
+                            {
+                                criteria = criteria.Remove(criteria.Length - 1);
+                            }
                             coursePrices = CourseService.GetCoursePricesByType(credentials.SubscriptionKey, credentials.AccountKey, criteria).ToList();
                         }
                     }

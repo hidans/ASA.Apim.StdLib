@@ -82,5 +82,15 @@ namespace ASA.Apim.Library.Properties {
                 return ((string)(this["ASA_Apim_Library_PostCodes_Service_PostCodes_Service"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
+        [global::System.Configuration.DefaultSettingValueAttribute("https://consulthidanapi.azure-api.net/nav/courseenrollments")]
+        public string ASA_Apim_Library_CourseEnrollments_Service_CourseEnrollments {
+            get {
+                return ((string)(this["ASA_Apim_Library_CourseEnrollments_Service_CourseEnrollments"]));
+            }
+        }
     }
 }

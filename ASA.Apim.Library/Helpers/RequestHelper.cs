@@ -11,12 +11,12 @@ namespace ASA.Apim.Library.Helpers
             {
                 if (!string.IsNullOrEmpty(credentials.AccountKey))
                 {
-                    AddHeader(request, "Ocp-Apim-account-Key", credentials.AccountKey);
+                    AddHeader(request, "Account", credentials.AccountKey);
                 }
 
                 if (!string.IsNullOrEmpty(credentials.SubscriptionKey))
                 {
-                    AddHeader(request, "Ocp-Apim-Subscription-Ke", credentials.SubscriptionKey);
+                    AddHeader(request, "Ocp-Apim-Subscription-Key", credentials.SubscriptionKey);
                 }
             }         
             return request;

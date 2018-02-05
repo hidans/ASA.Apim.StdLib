@@ -4,6 +4,7 @@ using System.Linq;
 using ASA.Apim.Library.CourseHeader_Service;
 using ASA.Apim.Library.CoursePrices_Service;
 using ASA.Apim.Library.Security;
+using ASA.Apim.Library.CourseEnrollments_Service;
 
 namespace ASA.Apim.Library
 {
@@ -192,6 +193,45 @@ namespace ASA.Apim.Library
                     Criteria = criteria
                 }
             };
+        }
+        #endregion
+
+        #region CourseEnrollment
+        /// <summary>
+        /// Opretter alle kursister i listen af CourseEnrollment.
+        /// </summary>
+        /// <param name="courseEnrollments">Hver tilmelding er 1 CourseEnrollment. Så 7 personer til samme kursus vil være 7 CourseEnrollments.</param>
+        /// <param name="subscriptionKey">Opret dig på Api Manageren for at få en key. [Påkrævet]</param>
+        /// <param name="accountKey">Regnskabs id'en fra navision. [Optional]</param>
+        /// <returns></returns>
+        public static bool CreateCourseEnrollment(IEnumerable<CourseEnrollment> courseEnrollments, string subscriptionKey, string accountKey = null)
+        {
+            var apiKeys = new ApiManagerCredentials()
+            {
+                AccountKey = accountKey,
+                SubscriptionKey = subscriptionKey
+
+            };
+            return CreateCourseEnrollment(courseEnrollments, apiKeys);
+        }
+        internal static bool CreateCourseEnrollment(IEnumerable<CourseEnrollment> courseEnrollments, ApiManagerCredentials credentials)
+        {
+            try
+            {
+                var navCourseEnrollments = new CourseEnrollments1 { CourseEnrollment = courseEnrollments.ToArray() };
+                var courseCreateService = new CourseEnrollments
+                {
+                    ApiCredentials = credentials
+                };
+                courseCreateService.CallCourseEnrollments(ref navCourseEnrollments);
+                courseCreateService.Dispose();
+                return true;
+            }
+            catch (Exception exception)
+            {
+                Services.LogService.Error("Fejl i oprettelse af kursusister.", exception);
+                return false;
+            }
         }
         #endregion
     }

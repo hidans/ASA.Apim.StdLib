@@ -50,6 +50,13 @@
   <PropertyGroup>
     <StartupObject />
   </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
       <HintPath>..\packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
@@ -72,6 +79,7 @@
     <Compile Include="Entity\CourseHeaderWithPrice.cs" />
     <Compile Include="Helpers\RequestHelper.cs" />
     <Compile Include="Partials\Countries_Service.cs" />
+    <Compile Include="Partials\CourseEnrollments.cs" />
     <Compile Include="Partials\CourseHeader_Service.cs" />
     <Compile Include="Partials\CourseList_Service.cs" />
     <Compile Include="Partials\CoursePrices_Service.cs" />
@@ -87,6 +95,11 @@
     <Compile Include="Services\CredentialService.cs" />
     <Compile Include="Services\LogService.cs" />
     <Compile Include="Web References\Countries_Service\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\CourseEnrollments_Service\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.map</DependentUpon>
@@ -124,7 +137,6 @@
     <None Include="app.config">
       <SubType>Designer</SubType>
     </None>
-    <None Include="ASA-Apim-Library.snk" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -135,6 +147,14 @@
     </None>
     <None Include="Web References\Countries_Service\Countries_Service.wsdl" />
     <None Include="Web References\Countries_Service\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\CourseEnrollments_Service\CourseEnrollments.wsdl" />
+    <None Include="Web References\CourseEnrollments_Service\CourseEnrollments1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\CourseEnrollments_Service\Reference.map">
       <Generator>MSDiscoCodeGenerator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
@@ -248,6 +268,17 @@
       </CachedDynamicPropName>
       <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
       <CachedSettingsPropName>ASA_Apim_Library_PostCodes_Service_PostCodes_Service</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="E:\WSDL\CourseEnrollments">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\CourseEnrollments_Service\</RelPath>
+      <UpdateFromURL>E:\WSDL\CourseEnrollments</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>ASA_Apim_Library_CourseEnrollments_Service_CourseEnrollments</CachedSettingsPropName>
     </WebReferenceUrl>
   </ItemGroup>
   <ItemGroup>
