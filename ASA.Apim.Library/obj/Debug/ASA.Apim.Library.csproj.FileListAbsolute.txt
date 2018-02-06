@@ -16,7 +16,7 @@ C:\Users\Dorte\Documents\GitHub\ASA.APIM.Lib\ASA.Apim.Library\bin\Debug\ASA.Apim
 C:\Users\Dorte\Documents\GitHub\ASA.APIM.Lib\ASA.Apim.Library\bin\Debug\ASA.Apim.Library.pdb
 C:\Users\Dorte\Documents\GitHub\ASA.APIM.Lib\ASA.Apim.Library\bin\Debug\log4net.dll
 C:\Users\Dorte\Documents\GitHub\ASA.APIM.Lib\ASA.Apim.Library\bin\Debug\log4net.xml
-C:\Users\Dorte\Documents\GitHub\ASA.APIM.Lib\ASA.Apim.Library\obj\Debug\ASA.Apim.Library.csprojResolveAssemblyReference.cache
 C:\Users\Dorte\Documents\GitHub\ASA.APIM.Lib\ASA.Apim.Library\obj\Debug\ASA.Apim.Library.csproj.CoreCompileInputs.cache
 C:\Users\Dorte\Documents\GitHub\ASA.APIM.Lib\ASA.Apim.Library\obj\Debug\ASA.Apim.Library.dll
 C:\Users\Dorte\Documents\GitHub\ASA.APIM.Lib\ASA.Apim.Library\obj\Debug\ASA.Apim.Library.pdb
+c:\users\dorte\Documents\GitHub\ASA.APIM.Lib\ASA.Apim.Library\obj\Debug\ASA.Apim.Library.csprojResolveAssemblyReference.cache
