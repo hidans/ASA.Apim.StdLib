@@ -140,6 +140,7 @@ namespace ASA.Apim.Library
             catch(Exception exception)
             {
                 Services.LogService.Error("Fejl i forespørgelse af kurser.", exception);
+                throw exception;
                 return new List<CourseHeader>();
             }          
         }
@@ -220,6 +221,7 @@ namespace ASA.Apim.Library
             catch (Exception exception)
             {
                 Services.LogService.Error("Fejl i forespørgelse af kursus priser.", exception);
+                throw exception;
                 return new List<CoursePrices>();
             }
         }
@@ -354,6 +356,7 @@ namespace ASA.Apim.Library
             catch (Exception exception)
             {
                 Services.LogService.Error("Fejl i sammensætning af kurser og priser.", exception);
+                throw exception;
             }
 
             return list;
@@ -434,6 +437,7 @@ namespace ASA.Apim.Library
             catch (Exception exception)
             {
                 Services.LogService.Error("Fejl i oprettelse af kursusister.", exception);
+                throw exception;
                 return false;
             }
         }
