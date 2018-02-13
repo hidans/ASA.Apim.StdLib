@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:tns="urn:microsoft-dynamics-schemas/page/courseheader" targetNamespace="urn:microsoft-dynamics-schemas/page/courseheader" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:apim-wsdltns="urn:microsoft-dynamics-schemas/page/courseheader" elementFormDefault="qualified" targetNamespace="urn:microsoft-dynamics-schemas/page/courseheader" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <xsd:complexType name="CourseHeader">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="1" name="Key" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="No" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Description" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Description_2" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Course_Type_No" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Course_Type_Description" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Course_Type_Group_Code" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Course_Type_Group_Description" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Max_No_Participants" type="xsd:int" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="No_Participation" type="xsd:int" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="No_Waiting_List" type="xsd:int" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="From_Date" type="xsd:date" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="To_Date" type="xsd:date" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="From_Time" type="xsd:time" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="To_Time" type="xsd:time" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Min_No_Participants" type="xsd:int" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Enrolment_Deadline" type="xsd:date" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Course_Location_Name" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Course_Location_Address" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Course_Location_Post_Code" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Course_Location_City" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Course_Location_Home_Page" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="CourseLocation_Municipal_Code" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="CourseLocation_Municipal_Name" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="CourseLocation_Latitude" type="xsd:decimal" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="CourseLocation_Longtitude" type="xsd:decimal" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Allow_Invoice" type="xsd:boolean" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Qty_Meeting_Times" type="xsd:decimal" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Teacher_Name" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Teacher_Work_Phone_No" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Teacher_Work_E_Mail" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="CourseHeader_List">
+        <xsd:sequence>
+          <xsd:element minOccurs="1" maxOccurs="unbounded" name="CourseHeader" type="apim-wsdltns:CourseHeader" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:simpleType name="CourseHeader_Fields">
+        <xsd:restriction base="xsd:string">
+          <xsd:enumeration value="No" />
+          <xsd:enumeration value="Description" />
+          <xsd:enumeration value="Description_2" />
+          <xsd:enumeration value="Course_Type_No" />
+          <xsd:enumeration value="Course_Type_Description" />
+          <xsd:enumeration value="Course_Type_Group_Code" />
+          <xsd:enumeration value="Course_Type_Group_Description" />
+          <xsd:enumeration value="Max_No_Participants" />
+          <xsd:enumeration value="No_Participation" />
+          <xsd:enumeration value="No_Waiting_List" />
+          <xsd:enumeration value="From_Date" />
+          <xsd:enumeration value="To_Date" />
+          <xsd:enumeration value="From_Time" />
+          <xsd:enumeration value="To_Time" />
+          <xsd:enumeration value="Min_No_Participants" />
+          <xsd:enumeration value="Enrolment_Deadline" />
+          <xsd:enumeration value="Course_Location_Name" />
+          <xsd:enumeration value="Course_Location_Address" />
+          <xsd:enumeration value="Course_Location_Post_Code" />
+          <xsd:enumeration value="Course_Location_City" />
+          <xsd:enumeration value="Course_Location_Home_Page" />
+          <xsd:enumeration value="CourseLocation_Municipal_Code" />
+          <xsd:enumeration value="CourseLocation_Municipal_Name" />
+          <xsd:enumeration value="CourseLocation_Latitude" />
+          <xsd:enumeration value="CourseLocation_Longtitude" />
+          <xsd:enumeration value="Allow_Invoice" />
+          <xsd:enumeration value="Qty_Meeting_Times" />
+          <xsd:enumeration value="Teacher_Name" />
+          <xsd:enumeration value="Teacher_Work_Phone_No" />
+          <xsd:enumeration value="Teacher_Work_E_Mail" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:complexType name="CourseHeader_Filter">
+        <xsd:sequence>
+          <xsd:element minOccurs="1" maxOccurs="1" name="Field" type="apim-wsdltns:CourseHeader_Fields" />
+          <xsd:element minOccurs="1" maxOccurs="1" name="Criteria" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="Read">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="No" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="Read_Result">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" maxOccurs="1" name="CourseHeader" type="apim-wsdltns:CourseHeader" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ReadByRecId">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="recId" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ReadByRecId_Result">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" maxOccurs="1" name="CourseHeader" type="apim-wsdltns:CourseHeader" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ReadMultiple">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="unbounded" name="filter" type="apim-wsdltns:CourseHeader_Filter" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="bookmarkKey" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="setSize" type="xsd:int" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ReadMultiple_Result">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" maxOccurs="1" name="ReadMultiple_Result" type="apim-wsdltns:CourseHeader_List" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="IsUpdated">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="Key" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="IsUpdated_Result">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="IsUpdated_Result" type="xsd:boolean" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetRecIdFromKey">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="Key" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetRecIdFromKey_Result">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="GetRecIdFromKey_Result" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="Read_InputMessage">
+    <wsdl:part name="parameters" element="tns:Read" />
+  </wsdl:message>
+  <wsdl:message name="Read_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Read_Result" />
+  </wsdl:message>
+  <wsdl:message name="ReadByRecId_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReadByRecId" />
+  </wsdl:message>
+  <wsdl:message name="ReadByRecId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReadByRecId_Result" />
+  </wsdl:message>
+  <wsdl:message name="ReadMultiple_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReadMultiple" />
+  </wsdl:message>
+  <wsdl:message name="ReadMultiple_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReadMultiple_Result" />
+  </wsdl:message>
+  <wsdl:message name="IsUpdated_InputMessage">
+    <wsdl:part name="parameters" element="tns:IsUpdated" />
+  </wsdl:message>
+  <wsdl:message name="IsUpdated_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IsUpdated_Result" />
+  </wsdl:message>
+  <wsdl:message name="GetRecIdFromKey_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRecIdFromKey" />
+  </wsdl:message>
+  <wsdl:message name="GetRecIdFromKey_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRecIdFromKey_Result" />
+  </wsdl:message>
+  <wsdl:portType name="CourseHeader_Service">
+    <wsdl:operation name="Read">
+      <wsdl:input message="tns:Read_InputMessage" />
+      <wsdl:output message="tns:Read_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReadByRecId">
+      <wsdl:input message="tns:ReadByRecId_InputMessage" />
+      <wsdl:output message="tns:ReadByRecId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReadMultiple">
+      <wsdl:input message="tns:ReadMultiple_InputMessage" />
+      <wsdl:output message="tns:ReadMultiple_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IsUpdated">
+      <wsdl:input message="tns:IsUpdated_InputMessage" />
+      <wsdl:output message="tns:IsUpdated_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRecIdFromKey">
+      <wsdl:input message="tns:GetRecIdFromKey_InputMessage" />
+      <wsdl:output message="tns:GetRecIdFromKey_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="CourseHeader_Service" type="tns:CourseHeader_Service">
+    <binding transport="http://schemas.xmlsoap.org/soap/http" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    <wsdl:operation name="Read">
+      <operation soapAction="urn:microsoft-dynamics-schemas/page/courseheader:Read" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <wsdl:input>
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </wsdl:input>
+      <wsdl:output>
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReadByRecId">
+      <operation soapAction="urn:microsoft-dynamics-schemas/page/courseheader:ReadByRecId" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <wsdl:input>
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </wsdl:input>
+      <wsdl:output>
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReadMultiple">
+      <operation soapAction="urn:microsoft-dynamics-schemas/page/courseheader:ReadMultiple" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <wsdl:input>
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </wsdl:input>
+      <wsdl:output>
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsUpdated">
+      <operation soapAction="urn:microsoft-dynamics-schemas/page/courseheader:IsUpdated" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <wsdl:input>
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </wsdl:input>
+      <wsdl:output>
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRecIdFromKey">
+      <operation soapAction="urn:microsoft-dynamics-schemas/page/courseheader:GetRecIdFromKey" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <wsdl:input>
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </wsdl:input>
+      <wsdl:output>
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CourseHeader_Service">
+    <wsdl:port name="CourseHeader_Service" binding="tns:CourseHeader_Service">
+      <address location="https://consulthidanapi.azure-api.net/nav/courseheader" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
